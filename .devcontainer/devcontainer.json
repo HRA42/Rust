@@ -1,0 +1,21 @@
+{
+  "image": "mcr.microsoft.com/devcontainers/universal:2-linux",
+  "waitFor": "onCreateCommand",
+  "onCreateCommand": "curl https://sh.rustup.rs -sSf | sh -s -- -y && . $HOME/.cargo/env && rustup install stable && rustup component add clippy",
+  "updateContentCommand": "cargo build",
+  "postCreateCommand": "",
+  "postAttachCommand": "",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "rust-lang.rust-analyzer",
+        "bungcip.better-toml",
+        "ms-vscode.cpptools",
+        "github.codespaces",
+        "github.copilot",
+        "github.copilot-labs",
+        "dustypomerleau.rust-syntax"
+      ]
+    }
+  }
+}
