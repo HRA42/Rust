@@ -1,8 +1,7 @@
 {
-  "image": "mcr.microsoft.com/devcontainers/universal:2-linux",
+  "image": "mcr.microsoft.com/vscode/devcontainers/rust:bullseye",
   "waitFor": "onCreateCommand",
-  "onCreateCommand": "curl https://sh.rustup.rs -sSf | sh -s -- -y && . $HOME/.cargo/env && rustup install stable && rustup component add clippy",
-  "updateContentCommand": "cargo build",
+  "onCreateCommand": "curl https://sh.rustup.rs -sSf | sh -s -- -y && rustup install stable && rustup component add clippy",
   "postCreateCommand": "",
   "postAttachCommand": "",
   "customizations": {
